@@ -1,0 +1,15 @@
+use 8657capgemini;
+select * from cust;
+alter table cust add salary double;
+select * from cust where age like'23%';
+update cust set salary=22000 where cid=1001;
+update cust set salary=25000 where cid=1002;
+select * from cust where salary like '200%';
+update cust set salary=29000 where cid=1003;
+select * from cust where salary like '22000%';
+select * from cust where salary like '%22000%';
+select * from cust where salary like '_500%';
+select * from cust where salary like '2_%_%';
+select * from cust where salary like '%0';
+select * from cust where salary like '_2%0';
+select * from cust where salary like '2___0';

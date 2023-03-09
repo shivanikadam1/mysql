@@ -1,0 +1,11 @@
+use 8657capgemini;
+select * from 8657capgemini.customer;
+select min(age) from customer;
+select * from 8657capgemini.player;
+select min(auction_price) from player;
+select max(auction_price) from player;
+select sum(auction_price) from player;
+select avg(auction_price) from player;
+select count(name) from player;
+select name from player limit 2;
+select name from player order by name desc limit 1;

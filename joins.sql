@@ -1,0 +1,25 @@
+use 8657capgemini;
+create table office(officeid varchar(50),officename varchar(60),deptid varchar(60),noofemp int);
+insert into office values('H001','ABC','A000',100);
+insert into office values('H002','XYZ','A001',400);
+insert into office values('H003','MNQ','A002',600);
+select * from office;
+select * from dept;
+desc dept;
+alter table office add foreign key(deptid) references dept(deptid);
+desc dept;
+select * from 8657capgemini.office;
+select * from 8657capgemini.dept;
+desc office;
+select * from dept;
+select * from dept join office;
+select deptname,officename,noofemp from dept join office on dept.deptid=office.deptid;
+select * from dept inner join office on dept.deptid=office.deptid;
+select * from dept left join office on dept.deptid=office.deptid;
+select * from dept right join office on dept.deptid=office.deptid;
+select * from dept cross join office;
+/* self jon*/
+select a.officename,b.noofemp from office a,office b where b.noofemp>20;
+select a.officename,b.noofemp from office a inner join office b on a.deptid=b.deptid;
+select a.officename,b.noofemp from office a right join office b on a.deptid=b.deptid;
+select a.officename,b.noofemp from office a left join office b on a.deptid=b.deptid;
